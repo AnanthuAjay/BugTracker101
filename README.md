@@ -10,17 +10,17 @@
 
 3.Use your respective branches:
 
-# Branch ananthu
+#Branch ananthu
 `git branch ananthu`
 
 `git checkout ananthu`
 
-# Branch taku
+#Branch taku
 `git branch taku`
 
 `git checkout taku`
 
-# Branch pranav
+#Branch pranav
 `git branch pranav`
 
 `git checkout pranav`
@@ -35,12 +35,12 @@
 
 6.Push the changes to the respective branch:
 
-# For branch ananthu
+#For branch ananthu
 `git push origin ananthu`
 
-# For branch taku
+#For branch taku
 `git push origin taku`
 
-# For branch pranav
+#For branch pranav
 `git push origin pranav`
 
