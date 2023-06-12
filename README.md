@@ -11,32 +11,36 @@
 3.Use your respective branches:
 
 # Branch ananthu
-git branch ananthu
-git checkout ananthu
+`git branch ananthu`
+
+`git checkout ananthu`
 
 # Branch taku
-git branch taku
-git checkout taku
+`git branch taku`
+
+`git checkout taku`
 
 # Branch pranav
-git branch pranav
-git checkout pranav
+`git branch pranav`
+
+`git checkout pranav`
 
 4. Make changes to the project files as required.
 
 5.Add and commit the changes:
 
-`git add .
-git commit -m "Commit message describing the changes"`
+`git add .`
+
+`git commit -m "Commit message describing the changes"`
 
 6.Push the changes to the respective branch:
 
 # For branch ananthu
-git push origin ananthu
+`git push origin ananthu`
 
 # For branch taku
-git push origin taku
+`git push origin taku`
 
 # For branch pranav
-git push origin pranav
+`git push origin pranav`
 
