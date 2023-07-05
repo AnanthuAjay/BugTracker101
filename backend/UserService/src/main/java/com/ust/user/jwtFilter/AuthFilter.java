@@ -9,13 +9,16 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.http.HttpMethod;
+import org.springframework.stereotype.Component;
 import org.springframework.web.filter.GenericFilterBean;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 
 
+@Component
 public class AuthFilter extends GenericFilterBean {
-	@Override
+	
+	
 	public void doFilter(ServletRequest request,
 			ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {

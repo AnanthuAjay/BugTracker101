@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,7 @@ import com.bug.bg.service.BugService;
 
 @RestController
 @RequestMapping("/bugs")
+@CrossOrigin("*")
 public class BugController {
 
   @Autowired
@@ -26,6 +28,12 @@ public class BugController {
   @GetMapping("/{id}")
   public Bug getBugById(@PathVariable("id") Long id) {
     return bugService.getBugById(id);
+  }
+  @GetMapping
+  public List<Bug> getAllBugs() {
+    // Retrieve bugs associated with the specified project from the Project Microservice or the database
+    // Return the list of bugs associated with the project
+	  return bugService.getAllBugs();
   }
 
   @PostMapping
@@ -56,5 +64,7 @@ public class BugController {
     // Return the list of bugs associated with the project
 	  return bugService.getBugsByProjectId(projectId);
   }
+  
+  
 
 }

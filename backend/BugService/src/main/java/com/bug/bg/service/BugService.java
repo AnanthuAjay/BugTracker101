@@ -46,4 +46,9 @@ public class BugService {
 		return bugRepository.getBugsByProjectId(projectId);
 	}
 
+	public List<Bug> getAllBugs() {
+		// TODO Auto-generated method stub
+		return bugRepository.findAll();
+	}
+
 }

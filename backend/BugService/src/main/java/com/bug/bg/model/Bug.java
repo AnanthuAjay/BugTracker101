@@ -15,30 +15,14 @@ public class Bug {
   private Long bugId;
   
   private String bugname;
-  private String[] description;
+  private String description;
   private Long projectId;
   private String status;
-  
   private Long userId;
+  private String userName;
   
   private Date createdAt;
   private String assignedTo;
-public Bug() {
-	super();
-	// TODO Auto-generated constructor stub
-}
-public Bug(Long bugId, String bugname, String[] description, Long projectId, String status, Long userId,
-		Date createdAt, String assignedTo) {
-	super();
-	this.bugId = bugId;
-	this.bugname = bugname;
-	this.description = description;
-	this.projectId = projectId;
-	this.status = status;
-	this.userId = userId;
-	this.createdAt = createdAt;
-	this.assignedTo = assignedTo;
-}
 public Long getBugId() {
 	return bugId;
 }
@@ -51,10 +35,10 @@ public String getBugname() {
 public void setBugname(String bugname) {
 	this.bugname = bugname;
 }
-public String[] getDescription() {
+public String getDescription() {
 	return description;
 }
-public void setDescription(String[] description) {
+public void setDescription(String description) {
 	this.description = description;
 }
 public Long getProjectId() {
@@ -72,8 +56,14 @@ public void setStatus(String status) {
 public Long getUserId() {
 	return userId;
 }
-public void setCreatedByUserId(Long createdByUserId) {
-	this.userId = createdByUserId;
+public void setUserId(Long userId) {
+	this.userId = userId;
+}
+public String getUserName() {
+	return userName;
+}
+public void setUserName(String userName) {
+	this.userName = userName;
 }
 public Date getCreatedAt() {
 	return createdAt;
@@ -87,6 +77,24 @@ public String getAssignedTo() {
 public void setAssignedTo(String assignedTo) {
 	this.assignedTo = assignedTo;
 }
+public Bug(Long bugId, String bugname, String description, Long projectId, String status, Long userId, String userName,
+		Date createdAt, String assignedTo) {
+	super();
+	this.bugId = bugId;
+	this.bugname = bugname;
+	this.description = description;
+	this.projectId = projectId;
+	this.status = status;
+	this.userId = userId;
+	this.userName = userName;
+	this.createdAt = createdAt;
+	this.assignedTo = assignedTo;
+}
+public Bug() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+  
   
   
   

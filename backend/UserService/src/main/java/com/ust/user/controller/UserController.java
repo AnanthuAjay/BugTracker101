@@ -29,16 +29,13 @@ public class UserController {
 	@Autowired
 	UserService userService;
 	
-	@PostMapping("/user/register")
+	@PostMapping("/register")
 	public ResponseEntity<?> registerUser(@RequestBody User user) throws Exception
 	{
 		System.out.println(user.getUsername());
 		System.out.println(user.getName());
 		System.out.println(user.getPassword());
-		System.out.println(user.getAddress());
-		System.out.println(user.getConpassword());
-		System.out.println(user.getEmail());
-		System.out.println(user.getPhone());
+		System.out.println(user.getRole());
 		
 		String tempUsername=user.getUsername();
 		if(tempUsername != null && tempUsername!="") {
@@ -50,15 +47,15 @@ public class UserController {
 		
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		String encodedPassword = passwordEncoder.encode(user.getPassword());
-		
-		User user2 = new User( user.getName(), user.getUsername(), encodedPassword, user.getEmail(), user.getAddress(), user.getPhone(), encodedPassword);
+			
+		User user2 = new User(user.getName(), user.getUsername(), encodedPassword, user.getEmail(),user.getRole());
 		
 		
 		User registerUser = userService.registerUser(user2);
 		return new ResponseEntity<User>(registerUser, HttpStatus.OK);
 	}
 	
-	@PostMapping("/users/login")
+	@PostMapping("/login")
 	public ResponseEntity<?> logIn(@RequestBody User user)
 	{
 		System.out.println(user.getUsername());
